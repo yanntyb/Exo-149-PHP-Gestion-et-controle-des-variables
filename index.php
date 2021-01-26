@@ -7,7 +7,7 @@
  */
 $var = 0;
 // TODO votre code ici.
-
+isset($var);
 
 
 
@@ -16,20 +16,22 @@ $var = 0;
  */
 $eraseMe = "Please erase me !";
 // TODO votre code ici.
-
+unset($eraseMe);
 
 /**
  * 3. Déclarez vous même un tableau et utilisez var_dump pour afficher toutes les informations de debug.
  */
 // TODO votre code ici.
 
+$tab = [1,2,3,4,5,6,7,8,9,10];
+var_dump($tab);
 echo "<br>";
 
 /**
  * 4. Faites la même chose avec le même tableau, mais pour la méthode print_r.
  */
 // TODO votre code ici.
-
+print_r($tab);
 echo "<br>";
 
 
@@ -39,8 +41,12 @@ echo "<br>";
  */
 $tab = ["test" => true, "name" => "Doe", "age" => 32];
 // TODO Votre code ici.
-
-
+if(array_key_exists("doNotExists", $tab)){
+    echo "Existe";
+}
+else{
+    echo "Existe pas";
+}
 /**
  * 6. Créez une variable contenant:
  *    - un booléen
@@ -62,4 +68,18 @@ $tab = ["test" => true, "name" => "Doe", "age" => 32];
  * Passez toutes les variables créées précédemment dans cette fonction.
  */
 
+$bool = true;
+$int = 12;
+$float = 35.2;
+$string = "yann";
+
 // TODO votre code ici.
+
+function catchType($var){
+    echo "La variable est de type " . gettype($var) . "<br>";
+}
+
+catchType($bool);
+catchType($int);
+catchType($float);
+catchType($string);
